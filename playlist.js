@@ -427,11 +427,9 @@ function skipForward() {
     }
 }
 
-// Function to load a track
+
 function loadTrack(index) {
-    // Implement the logic to load the track based on the provided index
-    // This may include updating UI elements, setting the source for the audio element, etc.
-    // Example:
+
     const audioElement = document.getElementById('audio-player');
     audioElement.src = recentlyPlayed[index].url;
 }
@@ -446,7 +444,6 @@ skipForwardButton.addEventListener("click", function () {
 });
 
 //play pause...
-// Event listener for play/pause button
 document.getElementById('play-pause').addEventListener('click', function () {
     togglePlayPause();
 });
@@ -522,49 +519,44 @@ function playAudio(url, title, imageUrl) {
         var seconds = Math.floor(time % 60);
         return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
     }
+
 ///recplay
-// Event listener for the play icon in the recently played container
+
 recentlyPlayedContainer.addEventListener('click', function (event) {
     var clickedElement = event.target;
 
-    // Check if the clicked element has the play-pause-button class
+   
     if (clickedElement.classList.contains('play-pause-button')) {
-        // Find the corresponding recentlyPlayed object based on the id
+       
         const clickedId = clickedElement.id;
         const clickedItem = recentlyPlayed.find(item => item.id === clickedId);
 
-        // Check if the clicked button is a play button
         if (clickedElement.classList.contains('bi-play-circle-fill')) {
-            // Add the clicked item to the recplay array and create a recPlay card
+
             if (clickedItem) {
                 recplay.push(clickedItem);
                 createRecPlayCard(clickedItem, recPlayContainer);
             }
         }
 
-        // Prevent the default behavior and stop event propagation
         event.preventDefault();
         event.stopPropagation();
     }
 });
 
-// Function to create a card and add it to recPlayContainer
+
 function createRecPlayCard(recentlyPlayed, container) {
     var recPlayCardDiv = document.createElement('div');
     recPlayCardDiv.className = 'link-flex-recplay recplay-card';
 
-    // Add a delete (remove) icon
     var deleteIcon = document.createElement('i');
     deleteIcon.className = 'bi bi-x-circle-fill delete-icon';
     deleteIcon.title = 'Remove from recplay';
 
-    // Event listener for the delete icon
     deleteIcon.addEventListener('click', function (event) {
-        // Remove the playlist from recplay
         const indexToRemove = recplay.findIndex(item => item.id === recentlyPlayed.id);
         if (indexToRemove !== -1) {
             recplay.splice(indexToRemove, 1);
-            // Remove the corresponding recPlay card from the container
             container.removeChild(recPlayCardDiv);
         }
         event.stopPropagation();
@@ -611,7 +603,6 @@ function createRecPlayCard(recentlyPlayed, container) {
         event.stopPropagation();
     });
 
-    // Add hover effect to the card
     recPlayCardDiv.addEventListener('mouseenter', function () {
         playPauseButton.style.display = 'inline-block';
     });
