@@ -498,18 +498,7 @@ function playAudio(url, title, imageUrl) {
         songTitleElement.textContent = title;
     }
        
-        // Function to trigger the heart icon animation
-        function triggerHeartAnimation() {
-            var heartIcon = document.getElementById('heart-icon');
-            
-            // Add the class for the heart icon animation
-            heartIcon.classList.add('jump');
-            
-            // Remove the class after a short delay (adjust as needed)
-            setTimeout(function () {
-                heartIcon.classList.remove('jump');
-            }, 1000); // 1000 milliseconds = 1 second, adjust as needed
-        }
+    
             // Event listener for timeline slider
     timelineSlider.addEventListener('input', function () {
         var newPosition = timelineSlider.value / 100;
