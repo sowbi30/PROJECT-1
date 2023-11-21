@@ -10,18 +10,7 @@ document.getElementById('search-link').addEventListener('click', function() {
     searchInput.style.display = (searchInput.style.display === 'none' || searchInput.style.display === '') ? 'block' : 'none';
 });
 
-//search
-document.getElementById('search-IMG').addEventListener('click', function() {
-    var SEARCHinput = document.getElementById('SEARCH-input');
-    SEARCHinput.style.display = (SEARCHinput.style.display === 'none' ||SEARCHinput.style.display === '') ? 'block' : 'none';
-});
 
-document.getElementById('search-link').addEventListener('click', function() {
-    var SEARCHinput = document.getElementById('SEARCH-input');
-    SEARCHinput.style.display = (SEARCHinput.style.display === 'none' || SEARCHinput.style.display === '') ? 'block' : 'none';
-});
-
-  
   //login-user
   document.getElementById('login-icon').addEventListener('click', function() {
     var loginFields = document.getElementById('login-fields');
@@ -30,7 +19,6 @@ document.getElementById('search-link').addEventListener('click', function() {
   
 // home 
 
-// Event listener for the Home icon
 document.getElementById('homeIcon').addEventListener('click', function (event) {
     
     event.preventDefault();
