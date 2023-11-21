@@ -1,4 +1,4 @@
-// playlist 
+// M4U
   
 document.addEventListener('DOMContentLoaded', function () {
     var madeForYouContainer = document.getElementById('madeForYouContainer');
