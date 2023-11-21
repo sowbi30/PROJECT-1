@@ -1166,22 +1166,7 @@
 }
 
 #heart-icon {
-  margin-left: 8px; /* Adjust the margin as needed */
-  transform-origin: bottom; /* Set the transform origin to the bottom */
+  margin-left: 8px;
+  transform-origin: bottom; 
   transition: transform 0.3s ease-in-out;
-}
-
-@keyframes jump {
-  0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-  }
-  40% {
-      transform: translateY(-20px); /* Adjust the jump height */
-  }
-  60% {
-      transform: translateY(-10px); /* Adjust the jump height */
-  }
-}
-.jump {
-  animation: jump 1s ease-in-out;
 }
